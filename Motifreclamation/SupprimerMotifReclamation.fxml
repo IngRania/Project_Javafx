@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="25" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tn.controllers.Motifreclamation.SupprimerMotifReclamationController"
+      style="-fx-background-color: #e3f2fd; -fx-padding: 40;">
+
+    <Label text="🗑️ Supprimer un Motif"
+           style="-fx-font-size: 26px; -fx-text-fill: #1565c0; -fx-font-weight: bold; -fx-font-family: 'Segoe UI';"/>
+
+    <GridPane vgap="15" hgap="15">
+        <Label text="ID du Motif :" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-size: 14px; -fx-text-fill: #0d47a1;" />
+        <TextField fx:id="txtIdMotif" promptText="ID du motif à supprimer"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   style="-fx-pref-width: 300px; -fx-background-radius: 5; -fx-padding: 8; -fx-background-color: #ffffff; -fx-border-color: #90caf9; -fx-border-radius: 5;" />
+    </GridPane>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="🗑 Supprimer" onAction="#handleSupprimerMotif"
+                style="-fx-background-color: #1976d2; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5;" />
+        <Button text="❌ Annuler" onAction="#handleAnnuler"
+                style="-fx-background-color: #546e7a; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5;" />
+    </HBox>
+</VBox>

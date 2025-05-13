@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="25" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="tn.controllers.Reponse.AjouterReponseController"
+      style="-fx-background-image: url('/images/edu6.png'); -fx-background-size: cover; -fx-background-position: center center;">
+
+    <padding>
+        <Insets top="30" right="40" bottom="30" left="40"/>
+    </padding>
+
+    <Text text="💬 Ajouter une Réponse"
+          style="-fx-font-size: 24px; -fx-fill: #1E3A8A; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="15" vgap="20" style="-fx-padding: 10;">
+        <Label text="📨 Réclamation :" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboReclamation" promptText="Sélectionner une réclamation"
+                  GridPane.columnIndex="1" GridPane.rowIndex="0"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="📝 Réponse :" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <TextArea fx:id="txtReponse" promptText="Entrez votre réponse"
+                  wrapText="true" prefRowCount="4"
+                  GridPane.columnIndex="1" GridPane.rowIndex="1"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="🎨 Couleur :" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboColor" promptText="Sélectionner une couleur"
+                  GridPane.columnIndex="1" GridPane.rowIndex="2"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="✍ Style :" GridPane.columnIndex="0" GridPane.rowIndex="3"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboFontStyle" promptText="Sélectionner un style"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="🔤 Police :" GridPane.columnIndex="0" GridPane.rowIndex="4"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboFontFamily" promptText="Sélectionner une police"
+                  GridPane.columnIndex="1" GridPane.rowIndex="4"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="📏 Taille :" GridPane.columnIndex="0" GridPane.rowIndex="5"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboFontSize" promptText="Sélectionner une taille"
+                  GridPane.columnIndex="1" GridPane.rowIndex="5"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="🖌 Décoration :" GridPane.columnIndex="0" GridPane.rowIndex="6"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="comboTextDecoration" promptText="Sélectionner une décoration"
+                  GridPane.columnIndex="1" GridPane.rowIndex="6"
+                  style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+    </GridPane>
+
+    <HBox spacing="20" alignment="CENTER">
+        <Button text="✅ Ajouter" onAction="#handleAjouterReponse"
+                style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+        <Button text="❌ Annuler" onAction="#handleAnnuler"
+                style="-fx-background-color: #1E3A8A; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+        <Button text="🔙 Retour" onAction="#handleRetour"
+                style="-fx-background-color: #e11d48; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+    </HBox>
+</VBox>

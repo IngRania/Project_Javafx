@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="20" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="tn.controllers.Reclamation.ModifierReclamationController"
+      style="-fx-background-image: url('/images/edu7.png'); -fx-background-size: cover; -fx-background-position: center center;">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Modifier la réclamation"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1E3A8A;"/>
+
+    <GridPane vgap="15" hgap="10">
+        <Label text="ID:" GridPane.columnIndex="0" GridPane.rowIndex="0"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <TextField fx:id="idTF" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0"
+                   style="-fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="Utilisateur ID:" GridPane.columnIndex="0" GridPane.rowIndex="1"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <TextField fx:id="utilisateurTF" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                   style="-fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="Motif:" GridPane.columnIndex="0" GridPane.rowIndex="2"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="motifComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2"
+                  style="-fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="Contenu:" GridPane.columnIndex="0" GridPane.rowIndex="3"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <TextArea fx:id="contenuTA" prefRowCount="5" wrapText="true"
+                  GridPane.columnIndex="1" GridPane.rowIndex="3"
+                  style="-fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+        <Label text="Statut:" GridPane.columnIndex="0" GridPane.rowIndex="4"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"/>
+        <ComboBox fx:id="statutComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4"
+                  style="-fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+    </GridPane>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Modifier" onAction="#handleModifier"
+                style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20; -fx-background-radius: 5;"/>
+        <Button text="Annuler" onAction="#handleAnnuler"
+                style="-fx-background-color: #1E3A8A; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20; -fx-background-radius: 5;"/>
+    </HBox>
+</VBox>

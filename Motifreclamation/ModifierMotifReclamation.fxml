@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="20" alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="tn.controllers.Motifreclamation.ModifierMotifReclamationController"
+      style="-fx-background-image: url('/images/edu7.png'); -fx-background-size: cover; -fx-background-position: center center; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);">
+
+    <padding>
+        <Insets top="20" right="30" bottom="20" left="30"/>
+    </padding>
+
+    <Text style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: #1E3A8A;">
+        Modifier un Motif
+    </Text>
+
+    <Text style="-fx-font-size: 14px; -fx-fill: #64748B;">
+        Veuillez modifier les informations ci-dessous
+    </Text>
+
+    <Separator style="-fx-padding: 10 0;"/>
+
+    <GridPane vgap="20" hgap="20" style="-fx-padding: 20 0;">
+        <columnConstraints>
+            <ColumnConstraints minWidth="150" prefWidth="150"/>
+            <ColumnConstraints minWidth="300" prefWidth="300"/>
+        </columnConstraints>
+
+        <Label text="ID du Motif :"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"
+               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+
+        <TextField fx:id="txtIdMotif"
+                   promptText="Entrez l'ID du motif"
+                   style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #BFDBFE;"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Nom du Motif :"
+               style="-fx-font-size: 14px; -fx-text-fill: #64748B;"
+               GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+
+        <TextField fx:id="txtNomMotif"
+                   promptText="Entrez le nouveau nom du motif"
+                   style="-fx-font-size: 14px; -fx-padding: 8; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #BFDBFE;"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+
+    <HBox spacing="15" alignment="CENTER_RIGHT" style="-fx-padding: 20 0 0 0;">
+        <Button text="Annuler" onAction="#handleAnnuler"
+                style="-fx-background-color: #1E3A8A; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="Modifier" onAction="#handleModifier"
+                style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 20; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+</VBox>

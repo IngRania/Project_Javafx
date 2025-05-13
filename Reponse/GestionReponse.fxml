@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="tn.controllers.Reponse.GestionReponseController"
+            prefWidth="950" prefHeight="700" style="-fx-background-image: url('/images/edu2.png'); -fx-background-size: cover; -fx-background-position: center center;">
+
+    <top>
+        <VBox spacing="20" style="-fx-background-color: linear-gradient(to bottom, #1E3A8A, #3B82F6); -fx-padding: 30; -fx-border-width: 0 0 2 0; -fx-border-color: #ffffff33;">
+            <Text text="Gestion des Réponses" fill="#ffffff" style="-fx-font-size: 32px; -fx-font-weight: 700; -fx-font-family: 'Roboto';">
+                <effect>
+                    <Glow level="0.2"/>
+                </effect>
+            </Text>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="30" style="-fx-padding: 40;">
+            <TableView fx:id="tableView" VBox.vgrow="ALWAYS" style="-fx-background-color: #F1F5F9; -fx-border-radius: 15; -fx-background-radius: 15; -fx-border-color: #BFDBFE; -fx-border-width: 1;">
+                <columns>
+                    <TableColumn text="ID" fx:id="colId" prefWidth="130" style="-fx-alignment: CENTER; -fx-font-size: 15px; -fx-background-color: #BFDBFE; -fx-font-family: 'Roboto'; -fx-border-color: #BFDBFE; -fx-text-fill: #1E3A8A;"/>
+                    <TableColumn text="ID Réclamation" fx:id="colIdReclamation" prefWidth="200" style="-fx-alignment: CENTER; -fx-font-size: 15px; -fx-background-color: #BFDBFE; -fx-font-family: 'Roboto'; -fx-border-color: #BFDBFE; -fx-text-fill: #1E3A8A;"/>
+                    <TableColumn text="Réponse" fx:id="colReponse" prefWidth="450" style="-fx-font-size: 15px; -fx-background-color: #BFDBFE; -fx-font-family: 'Roboto'; -fx-border-color: #BFDBFE; -fx-text-fill: #1E3A8A;"/>
+                </columns>
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.05)" radius="10" spread="0.1"/>
+                </effect>
+            </TableView>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox spacing="20" style="-fx-padding: 30; -fx-background-color: #F1F5F9; -fx-border-width: 1
+         0 0 0; -fx-border-color: #BFDBFE; -fx-background-radius: 0 0 15 15;" alignment="CENTER">
+            <Button text="➕ Ajouter" onAction="#handleAjouter"
+                    style="-fx-background-color: #3B82F6; -fx-text-fill: #ffffff; -fx-font-size: 16px; -fx-font-weight: 600; -fx-padding: 10 25; -fx-background-radius: 12; -fx-cursor: hand; -fx-font-family: 'Roboto';">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.2)" radius="8" spread="0.2"/>
+                </effect>
+            </Button>
+            <Button text="✏️ Modifier" onAction="#handleModifier"
+                    style="-fx-background-color: #60A5FA; -fx-text-fill: #ffffff; -fx-font-size: 16px; -fx-font-weight: 600; -fx-padding: 10 25; -fx-background-radius: 12; -fx-cursor: hand; -fx-font-family: 'Roboto';">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.2)" radius="8" spread="0.2"/>
+                </effect>
+            </Button>
+            <Button text="🗑 Supprimer" onAction="#handleSupprimer"
+                    style="-fx-background-color: #1E3A8A; -fx-text-fill: #ffffff; -fx-font-size: 16px; -fx-font-weight: 600; -fx-padding: 10 25; -fx-background-radius: 12; -fx-cursor: hand; -fx-font-family: 'Roboto';">
+                <effect>
+                    <DropShadow color="rgba(0,0,0,0.2)" radius="8" spread="0.2"/>
+                </effect>
+            </Button>
+        </HBox>
+    </bottom>
+
+</BorderPane>

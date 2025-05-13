@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tn.controllers.Reclamation.SupprimerReclamationController"
+            prefHeight="200.0" prefWidth="400.0"
+            style="-fx-background-color: #e3f2fd; -fx-font-family: 'Segoe UI';">
+
+    <children>
+        <Label layoutX="50" layoutY="50" text="ID Réclamation à supprimer:"
+               style="-fx-font-size: 14px; -fx-text-fill: #0d47a1;" />
+
+        <TextField fx:id="idTF" layoutX="220" layoutY="50"
+                   style="-fx-background-color: #ffffff; -fx-border-color: #90caf9; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 6;" />
+
+        <Button layoutX="150" layoutY="100" text="🗑 Supprimer" onAction="#SupprimerReclamation"
+                style="-fx-background-color: #1976d2; -fx-text-fill: white; -fx-font-size: 13px; -fx-background-radius: 5; -fx-padding: 8 20;" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<VBox spacing="25" alignment="CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="tn.controllers.Reclamation.AjouterReclamationController"
+      style="-fx-background-image: url('/images/edu6.png'); -fx-background-size: cover; -fx-background-position: center center;">
+
+   <padding>
+      <Insets top="30" right="40" bottom="30" left="40"/>
+   </padding>
+
+   <Text text="📨 Ajouter une Réclamation"
+         style="-fx-font-size: 24px; -fx-fill: #1E3A8A; -fx-font-weight: bold;"/>
+
+   <GridPane hgap="15" vgap="20" style="-fx-padding: 10;">
+      <Label text="👤 Utilisateur ID :" GridPane.columnIndex="0" GridPane.rowIndex="0"
+             style="-fx-font-size: 14px; -fx-text-fill: #092547;"/>
+      <TextField fx:id="utilisateurTF" promptText="Entrez l'ID de l'utilisateur"
+                 GridPane.columnIndex="1" GridPane.rowIndex="0"
+                 style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+      <Label text="📚 Motif :" GridPane.columnIndex="0" GridPane.rowIndex="1"
+             style="-fx-font-size: 14px; -fx-text-fill: #092547;"/>
+      <ComboBox fx:id="motifComboBox" promptText="Sélectionnez un motif"
+                GridPane.columnIndex="1" GridPane.rowIndex="1"
+                style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+      <Label text="📝 Contenu :" GridPane.columnIndex="0" GridPane.rowIndex="2"
+             style="-fx-font-size: 14px; -fx-text-fill: #092547;"/>
+      <TextArea fx:id="contenuTA"
+                promptText="Entrez le contenu de la réclamation"
+                wrapText="true" prefRowCount="5"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"
+                style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+
+      <Label text="🌐 Traduire en :" GridPane.columnIndex="0" GridPane.rowIndex="3"
+             style="-fx-font-size: 14px; -fx-text-fill: #092547;"/>
+      <HBox spacing="10" alignment="CENTER_LEFT" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <ComboBox fx:id="langueSourceComboBox" promptText="Langue source"
+                   style="-fx-pref-width: 150; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+         <ComboBox fx:id="langueComboBox" promptText="Langue cible"
+                   style="-fx-pref-width: 150; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+         <Button text="🌍 Traduire" onAction="#handleTraduire"
+                 style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-padding: 6 12; -fx-background-radius: 6;"/>
+      </HBox>
+
+      <Label text="📋 Statut :" GridPane.columnIndex="0" GridPane.rowIndex="4"
+             style="-fx-font-size: 14px; -fx-text-fill: #092547;"/>
+      <ComboBox fx:id="statutComboBox" promptText="Sélectionnez un statut"
+                GridPane.columnIndex="1" GridPane.rowIndex="4"
+                style="-fx-pref-width: 300; -fx-border-color: #BFDBFE; -fx-background-radius: 5; -fx-border-radius: 5;"/>
+   </GridPane>
+
+   <HBox spacing="20" alignment="CENTER">
+      <Button text="✅ Ajouter" onAction="#AjouterReclamation"
+              style="-fx-background-color: #3B82F6; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+      <Button text="❌ Annuler" onAction="#handleAnnuler"
+              style="-fx-background-color: #1E3A8A; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+      <Button text="🔙 Retour" onAction="#handleRetour"
+              style="-fx-background-color: #E11D48; -fx-text-fill: white; -fx-font-size: 14px; -fx-padding: 10 30; -fx-background-radius: 8;"/>
+   </HBox>
+</VBox>
